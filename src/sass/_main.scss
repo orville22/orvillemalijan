@@ -1,0 +1,151 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  color: #fff;
+  position: relative;
+  background-color: $color-blue-dk;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  position: relative;
+}
+
+.profile {
+  background-color: $color-green-dk;
+  align-items: center;
+
+  .container {
+    .profile-photo {
+      height: 20rem;
+      width: 20rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #b6dfffd6;
+      margin-bottom: 1rem;
+
+      img {
+        height: 20rem;
+      }
+    }
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-details {
+    p {
+      margin-bottom: 2rem;
+      line-height: 2.5rem;
+
+      span {
+        display: block;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.projects {
+  height: 100vh;
+  background-color: $color-blue-dk;
+}
+
+.title-big {
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 3px 3px 3px #4545452f;
+  position: relative;
+  margin-bottom: 2rem;
+
+  &.dim {
+    opacity: 0.2;
+  }
+
+  span {
+    display: inline-block;
+    position: absolute;
+    font-size: 4rem;
+    margin-left: 2rem;
+  }
+
+  &:hover {
+    animation: flicker 0.5s;
+    cursor: pointer;
+    color: aqua;
+  }
+}
+
+.lists {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .floor {
+    height: 3rem;
+    width: 100%;
+    background-color: $color-blue;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .shadow {
+      height: 1rem;
+      width: 50%;
+      background-color: $color-grey;
+      opacity: 0;
+      filter: blur(0.3rem);
+      border-radius: 50%;
+
+      &.lightsOn {
+        opacity: 0.5;
+      }
+    }
+
+    &.lightsOn {
+      background-color: $color-yellow;
+    }
+  }
+
+  &.lightsOn {
+    width: 100%;
+    height: 100%;
+    background-color: $color-green-dk;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+
+  .main-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    font-size: 3.5rem;
+    font-weight: 700;
+    position: relative;
+
+    .list-item {
+      margin: 2rem auto auto;
+      width: 75%;
+
+      a {
+        color: $color-yellow;
+
+        &:hover {
+          animation: flicker 0.3s;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
