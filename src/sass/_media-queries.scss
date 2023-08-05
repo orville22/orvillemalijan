@@ -8,14 +8,6 @@
   .main {
     grid-template-columns: 1fr;
 
-    .profile {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-    }
-
-    .projects {
-      height: 80vh;
-    }
     .title-big {
       font-size: 4rem;
     }
@@ -33,21 +25,15 @@
   }
 }
 
+@media (max-width: 752px) {
+  .profile {
+    flex-direction: column;
+  }
+  .profile-details {
+    text-align: center;
+  }
+}
 @media (max-width: 550px) {
-  .main {
-    grid-template-columns: 1fr;
-
-    .profile {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-    }
-  }
-
-  .main {
-    .profile {
-      grid-template-columns: 1fr;
-    }
-  }
   .more {
     .grid {
       grid-template-columns: 1fr;

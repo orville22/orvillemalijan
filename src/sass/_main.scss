@@ -1,65 +1,70 @@
 .main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
   color: #fff;
   position: relative;
   background-color: $color-blue-dk;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 5rem;
-  position: relative;
-}
-
 .profile {
-  background-color: $color-green-dk;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 80vh;
 
-  .container {
-    .profile-photo {
-      height: 20rem;
-      width: 20rem;
-      border-radius: 50%;
-      overflow: hidden;
-      background-color: #b6dfffd6;
-      margin-bottom: 1rem;
+  &-photo {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #b6dfffd6;
+    margin: 5rem;
 
-      img {
-        height: 20rem;
-      }
-    }
-    h3 {
-      margin-bottom: 1rem;
+    img {
+      height: 25rem;
     }
   }
+}
 
-  &-details {
-    p {
-      margin-bottom: 2rem;
-      line-height: 2.5rem;
-
-      span {
-        display: block;
-        font-weight: 700;
-      }
+.profile-details {
+  h2 {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  p {
+    margin-bottom: 3rem;
+    font-weight: 100;
+  }
+  .contact {
+    a:not(:last-child) {
+      margin-right: 3rem;
+    }
+    img {
+      height: 3rem;
     }
   }
 }
 
 .projects {
-  height: 100vh;
-  background-color: $color-blue-dk;
+  background-color: $color-grey;
+  height: 90rem;
+  padding: 5rem;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+
+  .category {
+    margin-bottom: 2rem;
+  }
 }
 
 .title-big {
   text-align: center;
   font-size: 5rem;
-  font-family: 'Press Start 2P', cursive;
   text-shadow: 3px 3px 3px #4545452f;
   position: relative;
-  margin-bottom: 2rem;
 
   &.dim {
     opacity: 0.2;
@@ -80,12 +85,13 @@
 }
 
 .lists {
-  height: 100%;
   position: relative;
+  padding: 7rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 50rem;
 
   .floor {
     height: 3rem;
@@ -120,8 +126,7 @@
 
   &.lightsOn {
     width: 100%;
-    height: 100%;
-    background-color: $color-green-dk;
+    background-color: #fff;
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   }
 
@@ -129,22 +134,34 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: auto;
-    font-size: 3.5rem;
-    font-weight: 700;
-    position: relative;
+    font-size: 3rem;
+    font-weight: 500;
+    height: 50rem;
 
     .list-item {
       margin: 2rem auto auto;
       width: 75%;
 
       a {
-        color: $color-yellow;
+        color: $color-blue-dk;
 
         &:hover {
           animation: flicker 0.3s;
-          color: #fff;
+          color: $color-grey;
         }
+      }
+    }
+  }
+
+  .tech-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    height: 50rem;
+
+    .list-item {
+      img {
+        height: 8rem;
       }
     }
   }

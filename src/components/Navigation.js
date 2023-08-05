@@ -8,24 +8,7 @@ export default function Navigation({ setActiveTab }) {
       <Logo />
       <ul className={isOpen ? 'nav-list open' : 'nav-list close'}>
         <li className="nav-item">
-          <a className="nav-link" href="index.html">
-            Home
-          </a>
-        </li>
-        <li
-          className="nav-item"
-          onClick={() => {
-            setIsOpen((isOpen) => !isOpen);
-          }}
-        >
-          <a
-            className="nav-link"
-            href="https://github.com/orville22"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub Page
-          </a>
+          <a href="index.html/#projects">Projects</a>
         </li>
         <li
           className="nav-item"
@@ -34,7 +17,7 @@ export default function Navigation({ setActiveTab }) {
             setActiveTab(1);
           }}
         >
-          More About Me
+          About Me
         </li>
         <li
           className="nav-item"
@@ -45,15 +28,6 @@ export default function Navigation({ setActiveTab }) {
         >
           Contact
         </li>
-        <li className="nav-item">
-          <a
-            href="https://www.youtube.com/channel/UC5hKPqYSWLhs-eUQ4DxKeqw"
-            target="_blank"
-            rel="noreferrer"
-          >
-            YouTube Channel
-          </a>
-        </li>
       </ul>
       <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
     </nav>
@@ -62,9 +36,11 @@ export default function Navigation({ setActiveTab }) {
 
 function Logo() {
   return (
-    <div className="logo">
-      <h1>Orville M.</h1>
-    </div>
+    <a className="logo" href="index.html">
+      <h1>
+        orville.<span>webdev</span>
+      </h1>
+    </a>
   );
 }
 

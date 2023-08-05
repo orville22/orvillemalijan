@@ -6,7 +6,6 @@
   padding: 1rem 2rem;
   height: 8rem;
   position: relative;
-  background-color: #ffbf80;
 
   &-list {
     margin-right: 10rem;
@@ -21,6 +20,7 @@
     color: $color-grey;
     position: relative;
     padding-bottom: 4px;
+    cursor: pointer;
 
     &:hover {
       animation: flicker steps(5);
@@ -50,7 +50,11 @@
   margin-left: 8rem;
   h1 {
     font-size: 2rem;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Poppins', sans-serif;
+    span {
+      font-weight: 500;
+      color: $color-green-dk;
+    }
   }
 }
 
