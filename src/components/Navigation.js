@@ -7,8 +7,14 @@ export default function Navigation({ setActiveTab }) {
     <nav className="nav">
       <Logo />
       <ul className={isOpen ? 'nav-list open' : 'nav-list close'}>
-        <li className="nav-item">
-          <a href="index.html/#projects">Projects</a>
+        <li
+          className="nav-item"
+          onClick={() => {
+            setIsOpen((isOpen) => !isOpen);
+            setActiveTab(0);
+          }}
+        >
+          <a href="#projects">Projects</a>
         </li>
         <li
           className="nav-item"
