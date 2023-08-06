@@ -8,6 +8,9 @@ import sass from '../images/tech-stack/sass.png';
 import node from '../images/tech-stack/node.png';
 import github from '../images/tech-stack/git-dark.png';
 import youtube from '../images/tech-stack/youtube-dark.png';
+import lines from '../images/vectors/lines.png';
+import dots from '../images/vectors/dots.png';
+import square from '../images/vectors/square-triangle.png';
 
 export default function Main() {
   return (
@@ -21,6 +24,10 @@ export default function Main() {
 function Profile() {
   return (
     <div className="profile">
+      <img className="bg-lines" src={lines} alt="lines"></img>
+      <img className="bg-dots" src={dots} alt="abstract"></img>
+      <img className="bg-square" src={square} alt="abstract"></img>
+
       <div className="profile-photo">
         <img src={myPhoto} alt="orville"></img>
       </div>

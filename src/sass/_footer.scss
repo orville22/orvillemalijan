@@ -1,0 +1,16 @@
+.footer {
+  height: 20rem;
+  background-color: $color-blue-dk;
+  color: $color-green-dk;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .links {
+    img {
+      height: 3rem;
+      margin: 3rem;
+    }
+  }
+}
