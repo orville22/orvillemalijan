@@ -307,8 +307,10 @@ button {
 
 .section {
   width: 90%;
+  min-height: 75vh;
   margin: 0 auto;
-  color: #282828; }
+  color: #282828;
+  margin-bottom: 3rem; }
   .section h1 {
     color: #1d5b79;
     margin-bottom: 2rem; }
@@ -340,7 +342,7 @@ button {
       transform: scale(1.05); }
 
 .contact-page {
-  height: 75vh;
+  max-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

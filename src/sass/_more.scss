@@ -1,7 +1,9 @@
 .section {
   width: 90%;
+  min-height: 75vh;
   margin: 0 auto;
   color: $color-grey;
+  margin-bottom: 3rem;
   h1 {
     color: $color-blue-dk;
     margin-bottom: 2rem;
