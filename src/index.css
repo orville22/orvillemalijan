@@ -339,6 +339,17 @@ button {
     .section button:hover {
       transform: scale(1.05); }
 
+.contact-page {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .contact-page h1 {
+    margin-bottom: 0; }
+  .contact-page p {
+    margin-bottom: 3rem; }
+
 .footer {
   height: 20rem;
   background-color: #1d5b79;
