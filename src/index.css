@@ -28,6 +28,9 @@ a:hover {
 button {
   border: none; }
 
+.app {
+  position: relative; }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -305,44 +308,51 @@ button {
     .lists .tech-list .list-item img {
       height: 8rem; }
 
-.section {
-  width: 90%;
-  min-height: 75vh;
-  margin: 0 auto;
-  color: #282828;
-  margin-bottom: 3rem; }
-  .section h1 {
-    color: #1d5b79;
-    margin-bottom: 2rem; }
-  .section h2 {
-    font-weight: 400; }
-  .section h3 {
-    color: #225670;
-    font-weight: 100;
-    margin-bottom: 2rem; }
-  .section span {
-    color: #ef6262;
-    font-weight: 500; }
-  .section .grid {
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: 1fr 1fr 1fr; }
-  .section button {
-    background-color: #f3aa60;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #1d5b79;
-    padding: 1rem;
-    border-radius: 50px;
-    width: 50%;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.184);
-    transition: all 0.2s ease-in-out; }
-    .section button:hover {
-      transform: scale(1.05); }
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; }
+  .about .text-container {
+    color: #468b97;
+    width: 50%; }
+    .about .text-container .title {
+      margin-bottom: 3rem; }
+      .about .text-container .title h1 {
+        font-size: 10rem;
+        text-transform: uppercase;
+        color: #1d5b79;
+        line-height: 8rem; }
+    .about .text-container quote {
+      color: #949494;
+      display: block;
+      width: 75%;
+      position: relative; }
+    .about .text-container p {
+      width: 70%;
+      font-size: 2rem; }
+  .about .image-container #guitar {
+    min-height: 50%; }
+  .about .image-container #macbook {
+    height: 25rem; }
+
+button {
+  background-color: #f3aa60;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1d5b79;
+  padding: 1rem;
+  margin: 3rem 0;
+  border-radius: 50px;
+  width: 20rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.184);
+  transition: all 0.2s ease-in-out; }
+  button:hover {
+    transform: scale(1.05); }
 
 .contact-page {
-  max-height: 75vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -359,7 +369,9 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%;
+  bottom: 0; }
   .footer .links img {
     height: 3rem;
     margin: 3rem; }

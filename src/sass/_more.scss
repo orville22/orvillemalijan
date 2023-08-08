@@ -1,44 +1,56 @@
-.section {
-  width: 90%;
-  min-height: 75vh;
-  margin: 0 auto;
-  color: $color-grey;
-  margin-bottom: 3rem;
-  h1 {
-    color: $color-blue-dk;
-    margin-bottom: 2rem;
-  }
-  h2 {
-    font-weight: 400;
-  }
-  h3 {
-    color: $color-blue;
-    font-weight: 100;
-    margin-bottom: 2rem;
-  }
-  span {
-    color: $color-red;
-    font-weight: 500;
-  }
-  .grid {
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: 1fr 1fr 1fr;
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+
+  .text-container {
+    color: $color-green-dk;
+    width: 50%;
+    .title {
+      margin-bottom: 3rem;
+      h1 {
+        font-size: 10rem;
+        text-transform: uppercase;
+        color: $color-blue-dk;
+        line-height: 8rem;
+      }
+    }
+    quote {
+      color: #949494;
+      display: block;
+      width: 75%;
+      position: relative;
+    }
+    p {
+      width: 70%;
+      font-size: 2rem;
+    }
   }
 
-  button {
-    background-color: $color-orange;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: $color-blue-dk;
-    padding: 1rem;
-    border-radius: 50px;
-    width: 50%;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.184);
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      transform: scale(1.05);
+  .image-container {
+    #guitar {
+      min-height: 50%;
     }
+    #macbook {
+      height: 25rem;
+    }
+  }
+}
+
+button {
+  background-color: $color-orange;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $color-blue-dk;
+  padding: 1rem;
+  margin: 3rem 0;
+  border-radius: 50px;
+  width: 20rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.184);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
   }
 }

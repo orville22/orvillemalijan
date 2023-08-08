@@ -35,7 +35,10 @@ function Profile() {
         <h2>Front-End React Developer</h2>
         <p>
           Hi there! My name is Orville. <br />
-          I'm a web developer and a creative enthusiast.
+          I'm a medical scientist turned web developer <br />
+          ...ergo a mad scientist!
+          <br />
+          Perhaps we can work together. Check out some of my projects below.
         </p>
         <div className="contact">
           <a

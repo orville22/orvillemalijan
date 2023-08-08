@@ -9,7 +9,7 @@ function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div>
+    <div className="app">
       <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
 
       {activeTab === 0 && <Main />}
