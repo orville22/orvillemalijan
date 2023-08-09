@@ -3,16 +3,17 @@ import macbook from '../images/macbook.png';
 
 export default function More({ activeTab, setActiveTab }) {
   return (
-    <div className="container about">
+    <div className="about" id="about">
       <div className="text-container">
+        <h1 className="section-title">More About Me</h1>
         <div className="title">
           <h1>Work{'<'}</h1>
           <h1>{'>'}Play</h1>
         </div>
         <p>
-          I am a web developer based in Melbourne. Creating and building
-          aesthetically pleasing websites is not just a skill, but a passion
-          that drives me consistently to elevate every project I undertake.
+          Creating and building aesthetically pleasing websites is not just a
+          skill, but a passion that drives me consistently to elevate every
+          project I undertake.
         </p>
         <p>When I'm not coding, I play guitar and make music videos. 🎸</p>
         <button onClick={() => setActiveTab(2)}>Let's connect</button>

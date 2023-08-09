@@ -19,14 +19,8 @@ export default function Navigation({ setActiveTab }) {
         >
           <a href="#projects">Projects</a>
         </li>
-        <li
-          className="nav-item"
-          onClick={() => {
-            setIsOpen((isOpen) => !isOpen);
-            setActiveTab(1);
-          }}
-        >
-          About Me
+        <li className="nav-item">
+          <a href="#about">About</a>
         </li>
         <li
           className="nav-item"

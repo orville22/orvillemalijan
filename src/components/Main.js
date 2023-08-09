@@ -32,13 +32,11 @@ function Profile() {
         <img src={myPhoto} alt="orville"></img>
       </div>
       <div className="profile-details">
-        <h2>Front-End React Developer</h2>
+        <h2 className="hero-title">Front-End Developer</h2>
         <p>
-          Hi there! My name is Orville. <br />
-          I'm a medical scientist turned web developer <br />
-          ...ergo a mad scientist!
-          <br />
-          Perhaps we can work together. Check out some of my projects below.
+          Hi there! My name is Orville. I'm a web developer based in Melbourne.
+          Perhaps we can work together. <br />
+          Check out some of my projects below.
         </p>
         <div className="contact">
           <a
@@ -99,7 +97,7 @@ function Projects() {
 
         <div className={isOpen1 || isOpen2 ? 'lists lightsOn' : 'lists'}>
           {isOpen1 && (
-            <ul className="main-list">
+            <div className="project-list">
               <ProjectItem>
                 <a
                   href="https://2hog-bbq.netlify.app"
@@ -136,7 +134,7 @@ function Projects() {
                   Clinical Chemistry Quiz
                 </a>
               </ProjectItem>
-            </ul>
+            </div>
           )}
           {isOpen2 && (
             <ul className="tech-list">

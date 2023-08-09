@@ -6,13 +6,13 @@
   padding: 1rem 2rem;
   height: 8rem;
   position: relative;
+  z-index: 999;
 
   &-list {
     margin-right: 10rem;
     display: flex;
     justify-content: center;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 
   &-item {
@@ -22,12 +22,6 @@
     padding-bottom: 4px;
     cursor: pointer;
 
-    &:hover {
-      animation: flicker steps(5);
-      animation-duration: 0.5s;
-      animation-fill-mode: forwards;
-    }
-
     &::before {
       position: absolute;
       content: '';
@@ -35,7 +29,7 @@
       width: 100%;
       bottom: 0;
       left: 0;
-      background-color: blue;
+      background-color: $color-green-dk;
       transform: scaleX(0);
       transform-origin: left;
       transition: all 0.3s ease-in-out;

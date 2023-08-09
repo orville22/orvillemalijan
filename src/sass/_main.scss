@@ -10,6 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
+  margin: 0 auto;
   height: 80vh;
   position: relative;
 
@@ -42,7 +44,7 @@
     border-radius: 50%;
     overflow: hidden;
     background-color: #b6dfffd6;
-    margin: 5rem;
+    margin: 3rem;
     z-index: 9;
 
     img {
@@ -53,9 +55,15 @@
 
 .profile-details {
   z-index: 9;
-  h2 {
+  padding: 0 2rem;
+  width: 60%;
+
+  .hero-title {
     font-size: 4rem;
     font-weight: 500;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto Slab';
   }
   p {
     margin-bottom: 3rem;
@@ -156,7 +164,7 @@
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   }
 
-  .main-list {
+  .project-list {
     display: flex;
     flex-direction: column;
     text-align: center;

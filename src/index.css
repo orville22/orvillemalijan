@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Slab:wght@500&display=swap");
 @import url(animate.css);
 *,
 *::before,
@@ -38,23 +38,19 @@ button {
   align-items: center;
   padding: 1rem 2rem;
   height: 8rem;
-  position: relative; }
+  position: relative;
+  z-index: 999; }
   .nav-list {
     margin-right: 10rem;
     display: flex;
     justify-content: center;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1.2rem; }
+    font-size: 1.8rem; }
   .nav-item {
     margin-left: 4rem;
     color: #282828;
     position: relative;
     padding-bottom: 4px;
     cursor: pointer; }
-    .nav-item:hover {
-      animation: flicker steps(5);
-      animation-duration: 0.5s;
-      animation-fill-mode: forwards; }
     .nav-item::before {
       position: absolute;
       content: '';
@@ -62,7 +58,7 @@ button {
       width: 100%;
       bottom: 0;
       left: 0;
-      background-color: blue;
+      background-color: #468b97;
       transform: scaleX(0);
       transform-origin: left;
       transition: all 0.3s ease-in-out; }
@@ -179,6 +175,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
+  margin: 0 auto;
   height: 80vh;
   position: relative; }
   .profile .bg-lines {
@@ -204,16 +202,21 @@ button {
     border-radius: 50%;
     overflow: hidden;
     background-color: #b6dfffd6;
-    margin: 5rem;
+    margin: 3rem;
     z-index: 9; }
     .profile-photo img {
       height: 25rem; }
 
 .profile-details {
-  z-index: 9; }
-  .profile-details h2 {
+  z-index: 9;
+  padding: 0 2rem;
+  width: 60%; }
+  .profile-details .hero-title {
     font-size: 4rem;
-    font-weight: 500; }
+    font-weight: 500;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto Slab'; }
   .profile-details p {
     margin-bottom: 3rem;
     font-weight: 100; }
@@ -285,19 +288,19 @@ button {
     width: 100%;
     background-color: #fff;
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
-  .lists .main-list {
+  .lists .project-list {
     display: flex;
     flex-direction: column;
     text-align: center;
     font-size: 3rem;
     font-weight: 500;
     height: 50rem; }
-    .lists .main-list .list-item {
+    .lists .project-list .list-item {
       margin: 2rem auto auto;
       width: 75%; }
-      .lists .main-list .list-item a {
+      .lists .project-list .list-item a {
         color: #1d5b79; }
-        .lists .main-list .list-item a:hover {
+        .lists .project-list .list-item a:hover {
           animation: flicker 0.3s;
           color: #282828; }
   .lists .tech-list {
@@ -312,29 +315,45 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh; }
+  flex-wrap: wrap;
+  padding: 5rem;
+  height: 90vh;
+  width: 80%;
+  margin: 0 auto; }
   .about .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #468b97;
-    width: 50%; }
+    flex: 1; }
+    .about .text-container .section-title {
+      color: #468b97;
+      width: 100%;
+      margin-bottom: 5rem; }
     .about .text-container .title {
       margin-bottom: 3rem; }
       .about .text-container .title h1 {
-        font-size: 10rem;
+        font-size: 9rem;
         text-transform: uppercase;
-        color: #1d5b79;
+        color: #225670;
         line-height: 8rem; }
+    .about .text-container p {
+      margin-bottom: 1.5rem; }
     .about .text-container quote {
       color: #949494;
       display: block;
-      width: 75%;
       position: relative; }
     .about .text-container p {
-      width: 70%;
       font-size: 2rem; }
-  .about .image-container #guitar {
-    min-height: 50%; }
-  .about .image-container #macbook {
-    height: 25rem; }
+  .about .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex: 1; }
+    .about .image-container #guitar {
+      min-height: 50%; }
+    .about .image-container #macbook {
+      height: 25rem; }
 
 button {
   background-color: #f3aa60;
@@ -388,6 +407,15 @@ button {
     .main .list-item {
       font-size: 85%; } }
 
+@media (max-width: 980px) {
+  .about {
+    display: block;
+    height: fit-content; }
+    .about .text-container .title h1 {
+      font-size: 7rem; }
+    .about .image-container {
+      display: none; } }
+
 @media (max-width: 800px) {
   .more .grid {
     grid-template-columns: 1fr 1fr; } }
@@ -400,9 +428,14 @@ button {
       display: none; }
     .profile .bg-abstract {
       top: 20%; }
-  .profile-details {
-    text-align: center; } }
+    .profile-photo {
+      height: 20rem;
+      width: 20rem; }
+      .profile-photo img {
+        height: 20rem; }
+    .profile .profile-details {
+      text-align: center; } }
 
-@media (max-width: 550px) {
+@media (max-width: 752px) and (max-width: 550px) {
   .more .grid {
     grid-template-columns: 1fr; } }

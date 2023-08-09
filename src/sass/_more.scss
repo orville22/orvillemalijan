@@ -2,33 +2,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  flex-wrap: wrap;
+  padding: 5rem;
+  height: 90vh;
+  width: 80%;
+  margin: 0 auto;
 
   .text-container {
+    .section-title {
+      color: $color-green-dk;
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: $color-green-dk;
-    width: 50%;
+    flex: 1;
+
     .title {
       margin-bottom: 3rem;
       h1 {
-        font-size: 10rem;
+        font-size: 9rem;
         text-transform: uppercase;
-        color: $color-blue-dk;
+        color: $color-blue;
         line-height: 8rem;
       }
+    }
+    p {
+      margin-bottom: 1.5rem;
     }
     quote {
       color: #949494;
       display: block;
-      width: 75%;
       position: relative;
     }
     p {
-      width: 70%;
       font-size: 2rem;
     }
   }
 
   .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex: 1;
     #guitar {
       min-height: 50%;
     }

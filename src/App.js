@@ -12,9 +12,11 @@ function App() {
     <div className="app">
       <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {activeTab === 0 && <Main />}
-      {activeTab === 1 && (
-        <More activeTab={activeTab} setActiveTab={setActiveTab} />
+      {activeTab === 0 && (
+        <>
+          <Main />
+          <More activeTab={activeTab} setActiveTab={setActiveTab} />
+        </>
       )}
       {activeTab === 2 && (
         <Contact activeTab={activeTab} setActiveTab={setActiveTab} />
